@@ -2,16 +2,7 @@ class HelloApp {
 
     public void display(String[] args) {
         if (args.length > 0) {
-            String result = "Hello ";
-
-            // Build string with trailing comma
-            for (String name : args) {
-                result += name + ", ";
-            }
-
-            // Remove last ", " using substring
-            result = result.substring(0, result.length() - 2);
-
+            String result = "Hello " + String.join(", ", args);
             System.out.println(result);
         } else {
             System.out.println("Hello World");
