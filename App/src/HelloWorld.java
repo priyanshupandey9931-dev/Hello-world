@@ -4,13 +4,16 @@ class HelloApp {
         if (args.length > 0) {
             System.out.print("Hello ");
 
-            for (int i = 0; i < args.length; i++) {
-                System.out.print(args[i]);
+            int count = 0;
+            for (String name : args) {
+                System.out.print(name);
+                count++;
 
-                if (i < args.length - 1) {
+                if (count < args.length) {
                     System.out.print(", ");
                 }
             }
+
             System.out.println();
         } else {
             System.out.println("Hello World");
